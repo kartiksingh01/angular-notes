@@ -13,8 +13,11 @@ export class NotesDetailComponent implements OnInit {
   deleted:boolean;
   public notesMainRef:NotesMainComponent;
   constructor(private appService:AppService) { }
-
+  newTitle:string
+  newDescription:string
   ngOnInit(): void {
+    this.newTitle = this.selectedNote.title;
+    this.newDescription = this.selectedNote.description;
   }
   deleteNote(id:number){
     this.appService.deleteNote(id);
@@ -23,9 +26,9 @@ export class NotesDetailComponent implements OnInit {
   closeNote(){
     this.appService.removeSelectedNote();
   }
-  makeChanges(newTitle:string,newDescription:string){
-    this.selectedNote.title=newTitle;
-    this.selectedNote.description=newDescription.trim();
+  makeChanges(){
+    this.selectedNote.title=this.newTitle;
+    this.selectedNote.description=this.newDescription.trim();
     console.log(this.selectedNote)
   }
 }
