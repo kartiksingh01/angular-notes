@@ -1,0 +1,12 @@
+.notes-container,
+.notes-detail {
+  min-height: 80vh;
+}
+.row {
+  max-width: 100vw;
+}
+.container-fluid {
+  background-color: #252525;
+  color: #f4f4f4;
+  min-height: 100vh;
+}

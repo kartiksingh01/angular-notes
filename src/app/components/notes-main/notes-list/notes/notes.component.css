@@ -1,0 +1,7 @@
+.notes-content {
+  border-radius: 15px;
+  background: linear-gradient(145deg, #212121, #282828);
+  box-shadow:  5px 5px 10px #1f1f1f,
+               -5px -5px 10px #2b2b2b;
+               cursor: pointer;
+}

@@ -1,0 +1,9 @@
+.no-note{
+  height: 100%;
+
+}
+.no-note h4{
+  display: block;
+  margin: 0 auto;
+  padding: 25%;
+}

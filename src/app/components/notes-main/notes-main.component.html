@@ -1,0 +1,15 @@
+<div class="row px-3">
+  <div class="col-md-4 notes-container">
+    <app-notes-list></app-notes-list>
+  </div>
+  <div class="col-md-8 float-end notes-detail">
+    <app-notes-detail *ngIf="selectedNote&&!removed;else noNote" [selectedNote]="selectedNote"></app-notes-detail>
+    <ng-template #noNote>
+      <div class="no-note text-center">
+        <h4>
+          Add or select a note
+        </h4>
+      </div>
+    </ng-template>
+  </div>
+</div>
