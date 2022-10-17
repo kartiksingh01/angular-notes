@@ -5,7 +5,7 @@ import { Notes } from '../models/notes.model';
   providedIn: 'root'
 })
 export class AppService {
-  private notes:Notes[]=[new Notes(1,"title","desc")];
+  private notes:Notes[]=[];
   constructor() { }
   notesChanged = new EventEmitter<Notes[]>();
   noteSelected = new EventEmitter<Notes>();

@@ -12,7 +12,7 @@ export class NotesListComponent implements OnInit {
   notes:Notes[];
   constructor(private appService:AppService) { }
   addNote(){
-    this.appService.addNote({id:Date.now(),title:"Sample",description:"Sample"})
+    this.appService.addNote({id:Date.now(),title:"Sample Title",description:"Sample Description"})
   }
   ngOnInit() {
     this.notes = this.appService.getNotes();
