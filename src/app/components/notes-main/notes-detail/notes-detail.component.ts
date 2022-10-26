@@ -31,4 +31,9 @@ export class NotesDetailComponent implements OnInit {
     this.selectedNote.description=this.newDescription.trim();
     console.log(this.selectedNote)
   }
+  ngOnChanges(){
+      this.newTitle = this.selectedNote.title;
+      this.newDescription = this.selectedNote.description;
+
+  }
 }

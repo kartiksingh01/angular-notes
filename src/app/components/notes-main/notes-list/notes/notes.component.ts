@@ -11,6 +11,7 @@ export class NotesComponent implements OnInit, DoCheck {
   @Input() note:Notes;
   constructor (private appService:AppService){}
   onSelected(){
+    console.log(this.note);
     this.appService.noteSelected.emit(this.note);
   }
   delete(id:number){

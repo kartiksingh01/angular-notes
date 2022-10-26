@@ -25,6 +25,10 @@ export class NotesMainComponent implements OnInit,DoCheck {
           this.removed=true;
         }
       })
+      this.appService.noteSelected.subscribe((note:Notes)=>{
+        this.removed=false;
+        this.selectedNote=note;
+      })
   }
 
 }
